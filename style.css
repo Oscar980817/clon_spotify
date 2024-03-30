@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  /*se realiza para que 1 rem sea 10px*/
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  grid-template-rows: 70px 796px 150px;
+  grid-template-areas:
+    "nav header"
+    "nav main"
+    "footer footer";
+  scroll-behavior: auto;
+}
+
+.header {
+  grid-area: header;
+  background-color: #0E0E0E;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 14px;
+}
+
+.header__arrows {
+  height: 40px;
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.header__arrows__figure {
+  height: 37px;
+  width: 37px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313;
+}
+
+.arrow-left {
+  color: white;
+}
+
+.arrow-right {
+  color: white;
+}
+
+.header__search {
+  height: 53px;
+  width: 455px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: -330px;
+}
+
+.header__search__input {
+  height: 53px;
+  width: 455px;
+  border-radius: 30px;
+  padding-left: 60px;
+}
+
+.header__search__figure {
+  position: absolute;
+  left: 28px;
+  top: 21px;
+}
+
+.search {
+  color: black;
+}
+
+.header__perfil {
+  height: 41px;
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.header__perfil__figure {
+  height: 37px;
+  width: 37px;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__perfil__figure__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.header__perfil__name {
+  color: white;
+  font-size: 2rem;
+  font-family: "DM Sans", sans-serif;
+  ;
+}
+
+.arrow-down {
+  color: white;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: #000000;
+  display: grid;
+  grid-template-rows: 70px repeat(4, 1fr);
+  align-items: center;
+}
+
+.figure-logo {
+  width: 164px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 15px;
+  align-self: center;
+  justify-self: center;
+}
+
+.figure-logo__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+.nav__figure {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.container-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+}
+
+.nav__text {
+  margin: 5px 0px 5px 10px;
+  color: white;
+  font-size: 1.7rem;
+  font-family: "DM Sans", sans-serif;
+  ;
+}
+
+
+.main {
+  grid-area: main;
+  background-color: #0E0E0E;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  margin: 14px;
+}
+
+.genres {
+  display: grid;
+  grid-template-rows: 0.15fr 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.genres__tittle {
+  color: white;
+  font-size: 2rem;
+  font-family: "DM Sans", sans-serif;
+  margin-left: 20px;
+}
+
+.genres__img-genres {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: 16px;
+}
+
+.genres__img-genres__figure {
+  width: 350px;
+  height: 275px;
+  overflow: hidden;
+}
+
+.genres__img-genres__figure__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.all {
+  display: grid;
+  grid-template-rows: 0.15fr 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.all__tittle {
+  color: white;
+  font-size: 2rem;
+  font-family: "DM Sans", sans-serif;
+  margin-left: 20px;
+}
+
+.all__img-genres {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  justify-items: center;
+  align-items: center;
+}
+
+.all__img-genres__figure {
+  width: 140px;
+  height: 275px;
+  overflow: hidden;
+}
+
+.all__img-genres__figure__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+.footer {
+  grid-area: footer;
+  background-color: #282828;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.arrow-left,
+.arrow-right,
+.arrow-down,
+.figure-logo__img,
+.logo,
+.nav__text,
+.genres__img-genres__figure,
+.all__img-genres__figure:hover {
+  cursor: pointer;
+  color: white;
+}
